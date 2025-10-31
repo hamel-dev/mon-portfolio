@@ -1,35 +1,359 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mon Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>El Hamel Brahim — Développeur Full‑Stack</title>
+    <meta
+      name="description"
+      content="Portfolio de El Hamel Brahim — Développeur Full‑Stack (SpringBoot, NodeJS, Flutter, React, Docker, MySQL)"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* petites personnalisations */
+      .gradient-underline {
+        background-image: linear-gradient(90deg, #06b6d4, #8b5cf6);
+        height: 4px;
+        border-radius: 4px;
+      }
+      .avatar {
+        width: 96px;
+        height: 96px;
+        border-radius: 9999px;
+        background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+        display: inline-block;
+      }
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 1rem;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: #e5e7eb;
+      }
+    </style>
   </head>
-  <body>
-    <header>
-      <h1>Bonjour, je suis [Ton Nom]</h1>
-      <p>Développeur / Designer Web</p>
+  <body class="bg-slate-50 text-slate-800 antialiased">
+    <header class="bg-white border-b shadow-sm">
+      <div
+        class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-4">
+          <div
+            class="avatar flex items-center justify-center text-white font-semibold"
+          >
+            EB
+          </div>
+          <div>
+            <h1 class="text-xl font-semibold">El Hamel Brahim</h1>
+            <p class="text-sm text-slate-600">
+              Développeur Full‑Stack — Web & Mobile • DevOps léger
+            </p>
+          </div>
+        </div>
+        <nav class="flex items-center gap-4 text-sm">
+          <a href="#about" class="hover:underline">À propos</a>
+          <a href="#skills" class="hover:underline">Compétences</a>
+          <a href="#exp" class="hover:underline">Expériences</a>
+          <a href="#education" class="hover:underline">Formations</a>
+          <a href="#contact" class="btn-link px-3 py-2 rounded-md bg-slate-100"
+            >Contact</a
+          >
+        </nav>
+      </div>
     </header>
 
-    <section id="projets">
-      <h2>Mes Projets</h2>
-      <div class="projet">
-        <h3>Projet 1</h3>
-        <p>Description courte + technologies utilisées</p>
-        <a href="#">Voir le site</a>
-      </div>
-      <div class="projet">
-        <h3>Projet 2</h3>
-        <p>Description courte + technologies utilisées</p>
-        <a href="#">Voir le site</a>
-      </div>
-    </section>
+    <main class="max-w-5xl mx-auto px-6 py-12">
+      <!-- Hero -->
+      <section id="about" class="grid md:grid-cols-3 gap-8 items-center">
+        <div class="md:col-span-2">
+          <h2 class="text-3xl font-bold">
+            Bonjour — je suis
+            <span class="text-indigo-600">El Hamel Brahim</span>
+          </h2>
+          <p class="mt-4 text-slate-700">
+            Développeur Full‑Stack confirmé avec plus de 5 ans d’expérience en
+            web et mobile. Spécialisé dans la conception, le déploiement et
+            l’optimisation d’applications : API REST, microservices, bases de
+            données et pipelines simples Docker. Autonome, orienté résultat et
+            habitué au travail en équipe ou en remote.
+          </p>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email : monemail@gmail.com</p>
-    </section>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a
+              href="https://github.com/hamel-dev"
+              target="_blank"
+              rel="noopener"
+              class="px-4 py-2 rounded-md border"
+              >GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/El%20Hamel%20Brahim"
+              target="_blank"
+              rel="noopener"
+              class="px-4 py-2 rounded-md border"
+              >LinkedIn</a
+            >
+            <a
+              href="mailto:elhamelbrahimbarka@gmail.com"
+              class="px-4 py-2 rounded-md bg-indigo-600 text-white"
+              >Me contacter</a
+            >
+          </div>
+
+          <div class="mt-6 text-sm text-slate-600">
+            <p>
+              <strong>Localisation :</strong> Nouakchott — Mauritanie •
+              Télétravail ou présentiel
+            </p>
+            <p class="mt-1"><strong>Téléphone :</strong> 38 10 88 13</p>
+          </div>
+        </div>
+
+        <div class="bg-white border p-6 rounded-lg shadow-sm">
+          <h3 class="font-semibold">Résumé rapide</h3>
+          <div class="mt-4 space-y-3 text-sm text-slate-700">
+            <p>
+              <strong>Domaines :</strong> Backend (SpringBoot, JEE, Laravel,
+              NodeJS, Python), Frontend & Mobile (Flutter, Angular, ReactJS),
+              Bases de données (MySQL, PostgreSQL, MongoDB).
+            </p>
+            <p>
+              <strong>DevOps :</strong> Docker (multi-conteneurs), Docker
+              Compose, administration Linux, déploiement d'APIs.
+            </p>
+            <p><strong>Langues :</strong> Arabe — Français — Anglais</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="mt-12">
+        <h3 class="text-xl font-semibold">Compétences techniques</h3>
+        <div class="mt-4 grid sm:grid-cols-2 gap-6">
+          <div class="bg-white border p-5 rounded-lg">
+            <h4 class="font-medium">Backend & API</h4>
+            <div class="mt-3 flex flex-wrap gap-2 text-sm">
+              <span class="px-3 py-1 bg-slate-100 rounded">SpringBoot</span>
+              <span class="px-3 py-1 bg-slate-100 rounded">JEE</span>
+              <span class="px-3 py-1 bg-slate-100 rounded">Laravel</span>
+              <span class="px-3 py-1 bg-slate-100 rounded">NodeJS</span>
+              <span class="px-3 py-1 bg-slate-100 rounded">Python</span>
+            </div>
+          </div>
+
+          <div class="bg-white border p-5 rounded-lg">
+            <h4 class="font-medium">Frontend & Mobile</h4>
+            <div class="mt-3 flex flex-wrap gap-2 text-sm">
+              <span class="px-3 py-1 bg-slate-100 rounded">ReactJS</span>
+              <span class="px-3 py-1 bg-slate-100 rounded">Angular</span>
+              <span class="px-3 py-1 bg-slate-100 rounded">Flutter</span>
+            </div>
+          </div>
+
+          <div class="bg-white border p-5 rounded-lg">
+            <h4 class="font-medium">Bases de données</h4>
+            <div class="mt-3 flex flex-wrap gap-2 text-sm">
+              <span class="px-3 py-1 bg-slate-100 rounded">MySQL</span>
+              <span class="px-3 py-1 bg-slate-100 rounded">PostgreSQL</span>
+              <span class="px-3 py-1 bg-slate-100 rounded">MongoDB</span>
+            </div>
+          </div>
+
+          <div class="bg-white border p-5 rounded-lg">
+            <h4 class="font-medium">DevOps & Infrastructure</h4>
+            <div class="mt-3 flex flex-wrap gap-2 text-sm">
+              <span class="px-3 py-1 bg-slate-100 rounded">Docker</span>
+              <span class="px-3 py-1 bg-slate-100 rounded">Docker‑Compose</span>
+              <span class="px-3 py-1 bg-slate-100 rounded">Nginx / Apache</span>
+              <span class="px-3 py-1 bg-slate-100 rounded"
+                >Administration Linux</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="exp" class="mt-12">
+        <h3 class="text-xl font-semibold">Expériences professionnelles</h3>
+        <div class="mt-6 relative timeline space-y-6 pl-8">
+          <article class="bg-white border p-5 rounded-lg">
+            <div class="flex items-start justify-between">
+              <div>
+                <h4 class="font-semibold">Développeur full stack — Cadorim</h4>
+                <p class="text-sm text-slate-600">
+                  Depuis janvier 2021 — Nouakchott
+                </p>
+              </div>
+              <div class="text-sm text-slate-500">
+                Gestion, maintenance, développement d'applications web & mobile
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white border p-5 rounded-lg">
+            <div class="flex items-start justify-between">
+              <div>
+                <h4 class="font-semibold">Développeur (stagiaire) — Cadorim</h4>
+                <p class="text-sm text-slate-600">Oct 2019 — Jan 2020</p>
+              </div>
+              <div class="text-sm text-slate-500">
+                Participation au développement d'applications et APIs
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white border p-5 rounded-lg">
+            <div class="flex items-start justify-between">
+              <div>
+                <h4 class="font-semibold">
+                  Developpeur web — Optiss Mauritanie
+                </h4>
+                <p class="text-sm text-slate-600">Mai 2019 — Août 2019</p>
+              </div>
+              <div class="text-sm text-slate-500">
+                Conception et développement d'une application pour le colis GP
+              </div>
+            </div>
+          </article>
+
+          <article class="bg-white border p-5 rounded-lg">
+            <div class="flex items-start justify-between">
+              <div>
+                <h4 class="font-semibold">
+                  Développeur — Facultés des sciences et techniques
+                </h4>
+                <p class="text-sm text-slate-600">Mars 2018 — Juin 2018</p>
+              </div>
+              <div class="text-sm text-slate-500">
+                Projets universitaires et support technique
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="mt-12">
+        <h3 class="text-xl font-semibold">Formations & Certifications</h3>
+        <div class="mt-4 grid sm:grid-cols-2 gap-6">
+          <div class="bg-white border p-5 rounded-lg">
+            <h4 class="font-medium">Master — Système d'information</h4>
+            <p class="text-sm text-slate-600">
+              Université Nouakchott Alaasriya — Oct 2018 à Juil 2020
+            </p>
+          </div>
+          <div class="bg-white border p-5 rounded-lg">
+            <h4 class="font-medium">Licence — Informatique (MIAGE)</h4>
+            <p class="text-sm text-slate-600">
+              Université Nouakchott Alaasriya — Oct 2015 à Juil 2018
+            </p>
+          </div>
+          <div class="bg-white border p-5 rounded-lg">
+            <h4 class="font-medium">Delf B2</h4>
+            <p class="text-sm text-slate-600">
+              Alliance française Nouakchott — Mars 2018 à Mai 2018
+            </p>
+          </div>
+          <div class="bg-white border p-5 rounded-lg">
+            <h4 class="font-medium">Baccalauréat — Mathématiques</h4>
+            <p class="text-sm text-slate-600">
+              Lycée de Rosso — Oct 2012 à Juin 2015
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interests & Languages -->
+      <section class="mt-12 grid sm:grid-cols-2 gap-6">
+        <div class="bg-white border p-5 rounded-lg">
+          <h4 class="font-medium">Langues</h4>
+          <ul class="mt-3 text-sm text-slate-700 list-disc list-inside">
+            <li>Arabe</li>
+            <li>Français</li>
+            <li>Anglais</li>
+          </ul>
+        </div>
+        <div class="bg-white border p-5 rounded-lg">
+          <h4 class="font-medium">Centres d'intérêt</h4>
+          <ul class="mt-3 text-sm text-slate-700 list-disc list-inside">
+            <li>Lecture</li>
+            <li>Football</li>
+            <li>Jogging</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Contact / Footer -->
+      <section id="contact" class="mt-12">
+        <div
+          class="bg-white border p-6 rounded-lg flex flex-col sm:flex-row items-start justify-between gap-6"
+        >
+          <div>
+            <h4 class="text-lg font-semibold">Télécharger le CV</h4>
+            <p class="mt-2 text-sm text-slate-600">
+              Téléchargez une version PDF de mon CV pour plus de détails.
+            </p>
+            <div class="mt-4">
+              <!-- Update the file path after you add the PDF to your repo -->
+              <a
+                href="assets/CV_ElHamel_Brahim.pdf"
+                download
+                class="px-4 py-2 bg-indigo-600 text-white rounded-md"
+                >Télécharger le CV (PDF)</a
+              >
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-lg font-semibold">Contact</h4>
+            <p class="mt-2 text-sm text-slate-600">
+              Email:
+              <a
+                href="mailto:elhamelbrahimbarka@gmail.com"
+                class="text-indigo-600"
+                >elhamelbrahimbarka@gmail.com</a
+              >
+            </p>
+            <p class="mt-1 text-sm text-slate-600">
+              GitHub:
+              <a
+                href="https://github.com/hamel-dev"
+                target="_blank"
+                class="text-indigo-600"
+                >github.com/hamel-dev</a
+              >
+            </p>
+            <p class="mt-1 text-sm text-slate-600">
+              LinkedIn:
+              <a
+                href="https://www.linkedin.com/in/El%20Hamel%20Brahim"
+                target="_blank"
+                class="text-indigo-600"
+                >linkedin.com/in/el-hamel-brahim</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <p class="mt-6 text-center text-sm text-slate-500">
+          © <span id="year"></span> El Hamel Brahim — Développeur Full‑Stack
+        </p>
+      </section>
+    </main>
+
+    <script>
+      // year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // small accessibility: keyboard focus visible
+      (function () {
+        document.body.addEventListener("keyup", function (e) {
+          if (e.key === "Tab") document.body.classList.add("show-focus");
+        });
+      })();
+    </script>
   </body>
 </html>
